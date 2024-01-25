@@ -1,0 +1,664 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*:focus {
+  outline: none;
+}
+
+/* Variables For colors of CSS */
+
+:root {
+  --background: #293040;
+  --primary-color: #d5b263;
+  --cards-background: #c9ad8b;
+}
+
+@media screen and (min-width: 770px) {
+  /* Body of the page  */
+  body {
+    background-color: var(--background);
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+  }
+
+  /* 1st  Header  */
+#Header-1
+{
+  height: 6vh; 
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+}
+
+#Header-2
+{
+  height: 12vh;
+  width: 100%;
+  background: var(--primary-color);
+}
+
+  /* Top Navbar  */
+
+  #top-navbar {
+    background-color: var(--background);
+    font-family: "Rubik", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 5vh;
+  }
+
+  /* Email and Number Borders  */
+
+  #top-navbar .nav-email {
+    padding: 0rem 1rem;
+    border-left: 2px solid var(--primary-color);
+    border-right: 2px solid var(--primary-color);
+    transition: all ease-in-out 0.3s;
+  }
+
+  #top-navbar .nav-number {
+    padding: 0rem 1rem;
+    border-left: 2px solid var(--primary-color);
+    border-right: 2px solid var(--primary-color);
+    transition: all ease-in-out 0.3s;
+  }
+
+  /* Email text of navbar  */
+  .nav-email a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+
+  /* 2nd Navbar  */
+  #second-navbar { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* TLS LOGO  */
+  #TLS-logo {
+    height: auto;
+    width: 100px; 
+    border-radius: 50%;
+    margin-left: 3rem; 
+  }
+
+  /* 2nd Navbar items  */
+  .nav-list {
+    display: flex;
+    gap: 5vh;
+    margin-right: 3rem;
+  }
+
+  /* li of navbar  */
+  .nav-list li {
+    list-style: none;
+    border: 2px solid var(--background);
+    border-radius: 25px;
+    position: relative;
+    padding: 1rem;
+    overflow: hidden;
+  }
+
+  /* after content of navbar  */
+  .nav-list li::after {
+    content: "";
+    background: var(--background);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 25px;
+    left: 0;
+    bottom: -100%;
+    transition: all ease-in-out 0.2s;
+  }
+
+  /* Links of Navbar  */
+
+  .nav-list > li > a {
+    font-family: "Rubik", sans-serif;
+    color: var(--background);
+    padding: 1rem;
+    text-decoration: none;
+    z-index: 9;
+    position: relative;
+  }
+
+  /* Main Box of the Website  */
+
+  main {
+    position: relative; 
+    top: 20; 
+    z-index: 10;
+    height: 90vh;
+    width: 100%;
+    background: linear-gradient(to right, #000000 50px, rgba(0, 0, 0, 0.397)),
+      url("tls-images/office-2.jpg");
+    /* filter: opacity(40%); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  /* position of div in a box */
+
+  main div {
+    position: relative;
+  }
+
+  /* left div of the box  */
+  main .left-side {
+    font-family: "Raleway", sans-serif;
+    font-size: 5rem;
+    bottom: 5rem;
+    color: var(--background);
+    margin-left: 4rem;
+  }
+
+  /* right div of the box  */
+  main .right-side {
+    font-family: "Lora", serif;
+    bottom: 9.5rem;
+    color: var(--primary-color);
+    font-weight: 10rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .main-button {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    font-weight: bolder;
+    border-radius: 20px;
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .main-button::after {
+    content: "";
+    position: absolute;
+    background: var(--background);
+    border-radius: 20px;
+    transition: all ease-in-out 0.3s;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: -100%;
+  }
+
+  .main-button a {
+    text-decoration: none;
+    color: var(--background);
+    z-index: 9;
+    position: relative;
+    padding: 1rem;
+  }
+
+  .bottom-space {
+    height: 100px;
+    width: auto;
+  }
+
+  /* Hero Section  */
+  #hero-section {
+    z-index: 9;
+    position: absolute;
+    right: 0;
+    height: 50vh;
+    width: 60vh;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(100px);
+    background-color: var(--primary-color);
+  }
+
+  #hero-section > .first-hero {
+    position: absolute;
+    height: 30vh;
+    width: 30vh;
+    background-color: var(--cards-background);
+    animation-name: first-animation;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  #hero-section > .second-hero {
+    position: absolute;
+    right: 10rem;
+    top: 10rem;
+    height: 30vh;
+    width: 30vh;
+    background-color: var(--cards-background);
+    animation-name: second-animation;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  /* Moving lines Section of the page  */
+
+  #main {
+    margin-top: 5rem;
+    height: fit-content;
+    width: 100%;
+    white-space: nowrap;
+    z-index: 8;
+  }
+
+  .headings {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .headings::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gola {
+    height: 30px;
+    width: 30px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0rem 2rem;
+  }
+
+  .con {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  .headings h4 {
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-family: "Raleway", sans-serif;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.367);
+  }
+
+  @keyframes move {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Second Section of the page  */
+
+  #second-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #second-section .left-subheading {
+    margin-right: 10%;
+  }
+
+  #second-section .left-subheading h2 {
+    font-family: "Inter", sans-serif;
+    color: var(--primary-color);
+    font-size: 4rem;
+  }
+
+  #second-section .left-subheading h4 {
+    font-family: "Inter", sans-serif;
+    color: var(--primary-color);
+    font-size: 1rem;
+  }
+
+  #second-section .right-subheading > div > img {
+    height: 5rem;
+    width: auto;
+  }
+
+  .main-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    gap: 1rem;
+    padding: 1rem;
+    transition: all ease-in-out 0.3s;
+  }
+
+  .sub-inner h4 {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  .sub-inner p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+  }
+
+  /* Box Editing of the Page  */
+
+  #box {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .box-left {
+    width: 60%;
+    padding: 3rem;
+  }
+
+  .box-left h3 {
+    font-family: "Lora", serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    padding: 3rem;
+    color: var(--primary-color);
+  }
+
+  .box-left p {
+    width: 80%;
+  }
+
+  .box-right {
+    width: 30%;
+  }
+
+  .box-left p {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5rem;
+  }
+
+  .box-right img {
+    height: 30vh;
+    width: auto;
+    border-radius: 25px;
+    box-shadow: 10px 10px 10px var(--background);
+    margin: 2rem 0rem;
+  }
+
+  .box-right p {
+    font-size: medium;
+    font-family: "Rubik", sans-serif;
+    opacity: 70%;
+    width: 90%;
+  }
+
+  /* 2nd Hero Section of the page  */
+
+  .hero-2 {
+    height: 50vh;
+    width: 50vh;
+    background: var(--primary-color);
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(30px);
+    left: 28vw;
+    z-index: -1;
+    animation-name: move-2;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  /* Form Box  */
+
+  #form {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
+  .form-right {
+    width: 40%;
+  }
+  .form-right img {
+    width: 60vh;
+    height: auto;
+    border-radius: 25px;
+    opacity: 70%;
+  }
+  .form-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    background: transparent;
+  }
+
+  form input {
+    height: 4rem;
+    width: 20rem;
+    background: transparent;
+    border: transparent;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: 0.5s width;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.215);
+  }
+
+  form input::placeholder {
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.382);
+    transition: ease-in-out;
+    transition-delay: 50ms;
+  }
+  input:focus {
+    width: 40rem; 
+    outline: transparent;
+    border: transparent;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.7);
+  }
+
+
+/* Footer  */
+
+  footer
+  {
+    height: 50vh ; 
+    width: 100% ; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;   
+    background: var(--primary-color);
+    position: relative; 
+  }
+  #footer-box-1 img
+  {
+    height: 30vh;
+    width: auto;
+    border-radius: 50%;
+  }
+
+  #footer-box-2
+  {
+    margin: 0rem 3rem;
+  }
+
+  #footer-box-2 h6
+  {
+    font-size: 1.2rem;
+    font-family: 'Raleway', sans-serif;
+
+  }
+
+  #footer-box-2 ul 
+  {
+    list-style: none;
+   gap: 4rem;
+  }
+  #footer-box-2 li 
+  {
+    margin: 1rem 1rem;  
+    font-size: 1.3rem; 
+    font-weight: bold;
+    text-align: center;
+
+
+  }
+
+  #footer-box-2 a 
+  {
+    text-decoration: none; 
+    color: var(--background);
+  }
+
+  #footer-box-3
+  {
+    margin: 0rem 3rem;
+  }
+#footer-box-3 a  
+{
+  text-decoration: none;
+  color: var(--background);
+  font-size: larger;
+  font-family: 'Rubik', sans-serif;
+
+}
+#footer-box-4
+{
+  display: flex;
+  flex-direction: column; 
+  gap: 0.5rem;
+}
+
+#footer-box-4 img
+{ 
+  filter: grayscale(100%);
+height: 3rem;
+width: auto; 
+transition: all ease-in-out 0.3s;
+}
+
+#footer-box-4 img:hover
+{
+  filter: grayscale(0%);
+}
+
+
+#copyright
+{
+  position: absolute;
+  bottom: 0; 
+  padding: 1rem 0rem;
+  font-size: larger;
+  font-family: 'Poppins', sans-serif;
+  color:var(--background);
+  font-weight: bold;
+
+
+}
+
+  /* Hover Animations  */
+
+  /* Top navbar Animations  */
+
+  #top-navbar > .nav-email:hover {
+    scale: 110%;
+  }
+
+  #top-navbar > .nav-number:hover {
+    scale: 110%;
+  }
+
+  /* Navbar list hover animation  */
+  .nav-list li:hover::after {
+    bottom: 0;
+    border-radius: 0px;
+  }
+
+  .nav-list > li > :hover {
+    color: var(--primary-color);
+  }
+
+  /* Main button hover animation  */
+
+  .main-button:hover::after {
+    border-radius: 0;
+    bottom: 0;
+  }
+
+  .main-button a:hover {
+    color: var(--primary-color);
+  }
+
+  /* main card hover  */
+  .main-card:hover {
+    background-color: rgba(41, 48, 64, 0.7);
+    border-radius: 25px;
+    box-shadow: 8px 8px 10px rgba(41, 48, 64, 0.7);
+  }
+
+  /* KeyFrames of the Documwnt  */
+
+  @keyframes first-animation {
+    from {
+      transform: translate(-10%, -10%);
+    }
+
+    to {
+      transform: translate(10%, 10%);
+    }
+  }
+
+  @keyframes second-animation {
+    from {
+      transform: translate(10%, 10%);
+    }
+
+    to {
+      transform: translate(-10%, 10%);
+    }
+  }
+}
+
+/* Our Commitment box  */
+
+@keyframes move-2 {
+  from {
+    transform: skew(-10deg);
+  }
+
+  to {
+    transform: skew(30deg);
+  }
+}

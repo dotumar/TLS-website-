@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables For colors of CSS */
+body {
+  position: relative;
+  background: var(--background);
+}
+
+:root {
+  --background: #293040;
+  --primary-color: #d5b263;
+  --cards-background: #c9ad8b;
+}
+
+@media screen and (max-width: 768px) {
+  #Header-1 {
+    display: none;
+  }
+
+  #second-navbar {
+    margin-top: 1rem;
+    background: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #TLS-logo {
+    height: 4rem;
+    width: auto;
+    border-radius: 50%;
+  }
+
+  .menu {
+    visibility: hidden;
+  }
+
+  main {
+    z-index: 10;
+    height: 50vh;
+    width: 100%;
+    background: linear-gradient(to left, #000000, transparent),
+      url("tls-images/office-2.jpg");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* left div of the box  */
+  .left-side {
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+    color: #293040;
+  }
+
+  /* right div of the box  */
+  .right-side {
+    width: 10rem;
+    font-family: "Lora", serif;
+    bottom: 9.5rem;
+    color: var(--primary-color);
+    font-weight: 10rem;
+    font-size: 0.5rem;
+    text-align: center;
+  }
+
+  .main-button {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.5rem;
+    font-weight: bolder;
+    border-radius: 20px;
+    padding: 0.5rem;
+    margin-top: 10px;
+    background-color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .main-button::after {
+    content: "";
+    position: absolute;
+    background: var(--background);
+    border-radius: 20px;
+    transition: all ease-in-out 0.3s;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: -100%;
+  }
+
+  #second-section button {
+    font-size: 1rem;
+  }
+
+  .main-button a {
+    text-decoration: none;
+    color: var(--background);
+    z-index: 9;
+    position: relative;
+    padding: 1rem;
+  }
+
+  /* Main button hover animation  */
+
+  .main-button:hover::after {
+    border-radius: 0;
+    bottom: 0;
+  }
+
+  .main-button a:hover {
+    color: var(--primary-color);
+  }
+
+  #second-section {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .main-card {
+    width: 17rem;
+    margin: 2rem 0rem;
+    display: flex;
+    text-align: left;
+  }
+
+  .main-card img {
+    height: 3.5rem;
+    width: auto;
+  }
+
+  #second-section h2 {
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-color);
+  }
+
+  #second-section h4 {
+    font-family: "Lora", serif;
+  }
+
+  .main-card p {
+    margin-top: 0.5rem;
+  }
+
+  #main {
+    display: none;
+  }
+
+  #main {
+    display: none;
+    visibility: none;
+  }
+
+  #box {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .box-left h3 {
+    font-family: "Lora", serif;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+  }
+  .box-left p {
+    font-size: small;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  .box-right {
+    margin: 1rem;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: end;
+  }
+  .box-right img {
+    height: 10rem;
+    width: 80%;
+    border-radius: 15px;
+    margin: 1rem 0rem;
+  }
+
+  .box-right p {
+    font-size: smaller;
+  }
+
+  #form {
+    display: none;
+  }
+
+  footer 
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    gap: 2rem;
+  }
+
+  #footer-box-1 img
+  {
+    height:5rem;
+    width: 5rem; 
+    border-radius: 50%;
+  }
+
+  #footer-box-2
+  {
+    text-align: center;
+  }
+  #footer-box-2 h6
+  {
+    font-size: large;
+    margin: 1rem 0rem;   
+  }
+  #footer-box-2 ul 
+  {
+    list-style: none;
+    display: flex;
+    gap: 1rem; 
+  }
+  #footer-box-2 a 
+  {
+    text-decoration: none;
+    color: var(--background);
+    font-weight: bold;
+  }
+  #footer-box-3
+  {
+display: flex;
+flex-direction: column; 
+align-items: center;
+justify-content: center;
+gap: 1rem ;
+  }
+  #footer-box-3 img 
+  {
+    height: 1.5rem;
+  }
+  #footer-box-4 img
+  {
+height: 2rem;
+width: auto;
+  }
+}
